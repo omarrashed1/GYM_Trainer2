@@ -3,7 +3,7 @@ package com.example.gym_trainer;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-
+//Health and Fitness info
 public class MainActivity extends AppCompatActivity {
 
     @Override
