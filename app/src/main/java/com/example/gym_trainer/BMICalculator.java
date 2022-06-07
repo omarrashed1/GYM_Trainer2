@@ -36,7 +36,7 @@ public class BMICalculator extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmicalculator);
 
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
 
         mcalculatebtn = findViewById(R.id.calculatebtn);
         mcurrentheight = findViewById(R.id.currentheight);
