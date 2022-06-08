@@ -31,13 +31,13 @@ public class BMIresult extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmiresult);
-        getSupportActionBar().hide();
-
-        getSupportActionBar().setElevation(0);
-        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"white\"></font>"));
-        getSupportActionBar().setTitle("Result");
-        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#1E1D1D"));
-        getSupportActionBar().setBackgroundDrawable(colorDrawable);
+//        getSupportActionBar().hide();
+//
+//        getSupportActionBar().setElevation(0);
+//        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"white\"></font>"));
+//        getSupportActionBar().setTitle("Result");
+//        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#1E1D1D"));
+//        getSupportActionBar().setBackgroundDrawable(colorDrawable);
 
         intent = getIntent();
 
