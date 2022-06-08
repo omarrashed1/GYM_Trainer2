@@ -3,6 +3,7 @@ package com.example.gym_trainer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
@@ -19,7 +20,7 @@ public class BMICalculator extends AppCompatActivity {
     TextView mcurrentweight, mcurrentage;
     ImageView mminusweight, mplusweight, mminusage, mplusage;
     RelativeLayout mmale, mfemale;
-    SeekBar mheightseekbar;
+    EditText heightText;
 
     int intweight = 55;
     int intage= 22;
@@ -48,7 +49,7 @@ public class BMICalculator extends AppCompatActivity {
         mminusage = findViewById(R.id.minusage);
         mplusweight = findViewById(R.id.plusweight);
         mplusage = findViewById(R.id.plusage);
-        mheightseekbar = findViewById(R.id.heightseekbar);
+        heightText = findViewById(R.id.heightText);
 
 
         mmale.setOnClickListener(new View.OnClickListener() {
@@ -69,27 +70,29 @@ public class BMICalculator extends AppCompatActivity {
             }
         });
 
-        mheightseekbar.setMax(300);
-        mheightseekbar.setProgress(170);
+        String height = String.valueOf(heightText.getText());
 
-        mheightseekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
-                currentprogress=progress;
-                mintprogress=String.valueOf(currentprogress);
-                mcurrentheight.setText(mintprogress);
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
+//        mheightseekbar.setMax(300);
+//        mheightseekbar.setProgress(170);
+//
+//        mheightseekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//            @Override
+//            public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
+//                currentprogress=progress;
+//                mintprogress=String.valueOf(currentprogress);
+//                mcurrentheight.setText(mintprogress);
+//            }
+//
+//            @Override
+//            public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//
+//            @Override
+//            public void onStopTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//        });
 
         mplusage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -152,7 +155,7 @@ public class BMICalculator extends AppCompatActivity {
                 {
                     Intent intent = new Intent(BMICalculator.this, BMIresult.class);
                     intent.putExtra("gender", typeofuser);
-                    intent.putExtra("height", mintprogress);
+                    intent.putExtra("height", height);
                     intent.putExtra("weight", weight2);
                     intent.putExtra("age", age2);
                     startActivity(intent);
