@@ -70,7 +70,7 @@ public class BMICalculator extends AppCompatActivity {
         });
 
         mheightseekbar.setMax(300);
-        mheightseekbar.setProgress(170);
+        mheightseekbar.setProgress(0);
 
         mheightseekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override

@@ -64,7 +64,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerInParent="true"
             android:layout_marginBottom="50dp"
-            android:text="170"
+            android:text="0"
             android:textColor="#9BA3EB"
             android:textSize="40sp"
             android:textStyle="bold">
@@ -150,15 +150,13 @@
         android:layout_marginBottom="35dp"
         android:layout_toEndOf="@+id/centerverticalline"
         android:background="@drawable/cardbackground">
-
         <ImageView
-            android:layout_width="59dp"
-            android:layout_height="70dp"
+            android:layout_width="170px"
+            android:layout_height="170px"
             android:layout_above="@+id/textfemale"
             android:layout_centerInParent="true"
             android:layout_marginBottom="20dp"
             android:src="@drawable/women">
-
         </ImageView>
 
         <TextView
@@ -172,6 +170,7 @@
             android:textColor="#9BA3EB"
             android:textSize="18sp"
             android:textStyle="bold">
+
 
         </TextView>
 
