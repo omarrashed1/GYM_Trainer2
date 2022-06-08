@@ -38,22 +38,24 @@
             android:layout_marginTop="15dp"
             android:text="Height"
             android:textAlignment="center"
-            android:textColor="#9BA3EB"
+            android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold">
 
         </TextView>
 
-        <EditText
-            android:id="@+id/heightText"
+        <SeekBar
+            android:id="@+id/heightseekbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="20dp"
+            android:progressTint="#9BA3EB"
+            android:thumbTint="#9BA3EB">
 
-        </EditText>
+        </SeekBar>
 
         <TextView
             android:id="@+id/currentheight"
