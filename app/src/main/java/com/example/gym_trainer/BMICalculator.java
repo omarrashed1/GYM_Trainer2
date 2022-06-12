@@ -3,9 +3,12 @@ package com.example.gym_trainer;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,6 +23,7 @@ public class BMICalculator extends AppCompatActivity {
     ImageView mminusweight, mplusweight, mminusage, mplusage;
     RelativeLayout mmale, mfemale;
     SeekBar mheightseekbar;
+    Spinner spinner;
 
     int intweight = 55;
     int intage= 22;
@@ -28,7 +32,7 @@ public class BMICalculator extends AppCompatActivity {
     String typeofuser = "0";
     String weight2 = "55";
     String age2 = "22";
-
+    double value;
 
 
     @Override
@@ -49,7 +53,45 @@ public class BMICalculator extends AppCompatActivity {
         mplusweight = findViewById(R.id.plusweight);
         mplusage = findViewById(R.id.plusage);
         mheightseekbar = findViewById(R.id.heightseekbar);
+        spinner = findViewById(R.id.spinner2);
 
+        String[] items = new String[] { "activity level", "Not Active", "Light activity 1-3 times a week", "Moderate intensity activity 3-5 times a week",
+        "Very high activity 6-7 times a week", "Extremely high activity"};
+        ArrayAdapter<String>adapter = new ArrayAdapter<String>(BMICalculator.this, android.R.layout.simple_spinner_item, items);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                switch (position){
+                    case 1: // not active
+                        value = 1.200;
+                        break;
+                    case 2: // 1-3 times a week
+                        value = 1.375;
+                        break;
+                    case 3: // 3-5 times a week
+                        value = 1.550;
+                        break;
+                    case 4: // 6-7 times a week
+                        value = 1.725;
+                        break;
+                    case 5: // Extremely high activity
+                        value = 1.900 ;
+                        break;
+                    default:
+                        value = 0;
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+                Toast.makeText(getApplicationContext(),"Select Your Activity Level", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         mmale.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -155,6 +197,7 @@ public class BMICalculator extends AppCompatActivity {
                     intent.putExtra("height", mintprogress);
                     intent.putExtra("weight", weight2);
                     intent.putExtra("age", age2);
+                    intent.putExtra("active", value);
                     startActivity(intent);
 
                 }
