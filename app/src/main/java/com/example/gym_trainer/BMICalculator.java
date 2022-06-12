@@ -23,8 +23,8 @@ public class BMICalculator extends AppCompatActivity {
 
     int intweight = 55;
     int intage= 22;
-    int currentprogress;
-    String mintprogress;
+    int currentprogress = 0;
+    String mintprogress = "0";
     String typeofuser = "0";
     String weight2 = "55";
     String age2 = "22";
