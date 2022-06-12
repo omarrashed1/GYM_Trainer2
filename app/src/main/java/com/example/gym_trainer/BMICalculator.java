@@ -157,17 +157,7 @@ public class BMICalculator extends AppCompatActivity {
                     intent.putExtra("age", age2);
                     startActivity(intent);
 
-
-
-
                 }
-
-
-
-
-
-
-
 
             }
         });
