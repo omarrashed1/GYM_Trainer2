@@ -31,13 +31,13 @@ public class BMIresult extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bmiresult);
-        getSupportActionBar().hide();
-
-        getSupportActionBar().setElevation(0);
-        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"white\"></font>"));
-        getSupportActionBar().setTitle("Result");
-        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#1E1D1D"));
-        getSupportActionBar().setBackgroundDrawable(colorDrawable);
+//        getSupportActionBar().hide();
+//
+//        getSupportActionBar().setElevation(0);
+//        getSupportActionBar().setTitle(Html.fromHtml("<font color=\"white\"></font>"));
+//        getSupportActionBar().setTitle("Result");
+//        ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#1E1D1D"));
+//        getSupportActionBar().setBackgroundDrawable(colorDrawable);
 
         intent = getIntent();
 
@@ -62,20 +62,20 @@ public class BMIresult extends AppCompatActivity {
         if(intbmi<16)
         {
             mbmicategory.setText("Severe Thinness");
-            mbackground.setBackgroundColor(Color.RED);
+            mbackground.setBackgroundColor(Color.GRAY);
             mimageview.setImageResource(R.drawable.crosss);
         }
         else if(intbmi < 16.9 && intbmi>16)
         {
             mbmicategory.setText("Moderate Thinness");
-            mbackground.setBackgroundColor(Color.RED);
-            mimageview.setImageResource(R.drawable.warning);
+            mbackground.setBackgroundColor(Color.WHITE);
+            mimageview.setImageResource(R.drawable.wwarning);
         }
         else if(intbmi < 18.4 && intbmi>17)
         {
             mbmicategory.setText("Mild Thinness");
-            mbackground.setBackgroundColor(Color.RED);
-            mimageview.setImageResource(R.drawable.warning);
+            mbackground.setBackgroundColor(Color.WHITE);
+            mimageview.setImageResource(R.drawable.wwarning);
         }
         else if(intbmi<25 && intbmi>18.4)
         {
@@ -85,14 +85,14 @@ public class BMIresult extends AppCompatActivity {
         else if(intbmi<29.4 && intbmi>25)
         {
             mbmicategory.setText("Overweight");
-            mbackground.setBackgroundColor(Color.RED);
-            mimageview.setImageResource(R.drawable.warning);
+            mbackground.setBackgroundColor(Color.WHITE);
+            mimageview.setImageResource(R.drawable.wwarning);
         }
         else
         {
             mbmicategory.setText("Obese");
-            mbackground.setBackgroundColor(Color.RED);
-            mimageview.setImageResource(R.drawable.warning);
+            mbackground.setBackgroundColor(Color.WHITE);
+            mimageview.setImageResource(R.drawable.wwarning);
         }
 
 

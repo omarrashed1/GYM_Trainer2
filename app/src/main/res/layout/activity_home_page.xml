@@ -146,14 +146,14 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="204dp"
-        android:layout_height="164dp"
+        android:layout_width="134dp"
+        android:layout_height="99dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.292"
-        app:srcCompat="@drawable/running" />
+        app:layout_constraintVertical_bias="0.36"
+        app:srcCompat="@drawable/rrunning" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
