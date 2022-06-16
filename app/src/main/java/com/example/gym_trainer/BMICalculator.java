@@ -32,7 +32,7 @@ public class BMICalculator extends AppCompatActivity {
     String typeofuser = "0";
     String weight2 = "55";
     String age2 = "22";
-    double value;
+    String value;
 
 
     @Override
@@ -67,22 +67,22 @@ public class BMICalculator extends AppCompatActivity {
 
                 switch (position){
                     case 1: // not active
-                        value = 1.200;
+                        value = "1.200";
                         break;
                     case 2: // 1-3 times a week
-                        value = 1.375;
+                        value = "1.375";
                         break;
                     case 3: // 3-5 times a week
-                        value = 1.550;
+                        value = "1.550";
                         break;
                     case 4: // 6-7 times a week
-                        value = 1.725;
+                        value = "1.725";
                         break;
                     case 5: // Extremely high activity
-                        value = 1.900 ;
+                        value = "1.900" ;
                         break;
                     default:
-                        value = 0;
+                        value = "0";
                 }
 
             }

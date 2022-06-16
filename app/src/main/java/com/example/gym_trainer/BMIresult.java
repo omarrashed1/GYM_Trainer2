@@ -12,20 +12,22 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.w3c.dom.Text;
+
 public class BMIresult extends AppCompatActivity {
 
     android.widget.Button mrecalculatebtn;
     android.widget.Button mcontinuebtn;
-    TextView mbmidisplay, mbmicategory, mgender;
+    TextView mbmidisplay, mbmicategory, mgender, calDisplay;
     Intent intent;
     ImageView mimageview;
     String mbmi;
     float intbmi;
     String height;
     String weight;
-    float intheight, intweight;
+    float intheight, intweight, intAge ,intValue;
     RelativeLayout mbackground;
-
+    String value ,age;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,13 +49,31 @@ public class BMIresult extends AppCompatActivity {
         mbackground = findViewById(R.id.contentlayout);
         mimageview = findViewById(R.id.imageview);
         mrecalculatebtn = findViewById(R.id.recalculatebtn);
+        calDisplay = findViewById(R.id.calDisplay);
 
         height = intent.getStringExtra("height");
         weight = intent.getStringExtra("weight");
+        value = intent.getStringExtra("active");
+        age = intent.getStringExtra("age");
 
         intheight = Float.parseFloat(height);
         intweight = Float.parseFloat(weight);
+        intAge = Float.parseFloat(age);
+        intValue = Float.parseFloat(value);
 
+
+        float calories = 0;
+        if (intent.getStringExtra("gender").equals("Male")){
+            calories = (float) ((10 * intweight) + (6.25 * intheight) - (5 * intAge) + 5);
+            calories = calories * intValue;
+        }else if (intent.getStringExtra("gender").equals("Female")){
+            calories = (float) ((10 * intweight) + (6.25 * intheight) - (5 * intAge) - 161);
+            calories = calories * intValue;
+        }else{
+            calories = 1;
+        }
+        String cal;
+        cal = String.valueOf(calories);
         intheight = intheight/100;
         intbmi = intweight/(intheight*intheight);
 
@@ -98,6 +118,7 @@ public class BMIresult extends AppCompatActivity {
 
         mgender.setText(intent.getStringExtra("gender"));
         mbmidisplay.setText(mbmi);
+        calDisplay.setText(cal);
 
 
 

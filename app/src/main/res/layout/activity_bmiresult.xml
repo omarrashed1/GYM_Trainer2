@@ -31,13 +31,26 @@
         android:padding="20dp">
 
         <TextView
+            android:id="@+id/calDisplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bmicategory"
+            android:layout_centerHorizontal="true"
+            android:text="Your Calories is "
+            android:textColor="#9BA3EB"
+            android:textSize="25sp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
             android:id="@+id/bmidisplay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:text="55"
             android:textColor="#9BA3EB"
-            android:textSize="50sp"
+            android:textSize="40sp"
             android:textStyle="bold">
 
         </TextView>
