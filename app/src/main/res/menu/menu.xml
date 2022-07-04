@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/home"
+
+        android:title="home" />
+
+    <item
+        android:id="@+id/exe"
+        android:icon="@drawable/weightlifting"
+
+        android:title="التمارين" />
+    <item
+        android:id="@+id/home2"
+        android:icon="@drawable/calculate"
+        android:title="home2"
+        />
+
+
+</menu>

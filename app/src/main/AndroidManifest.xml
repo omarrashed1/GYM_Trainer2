@@ -10,9 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GYM_Trainer">
         <activity
+            android:name=".exe"
+            android:exported="false" />
+        <activity
+            android:name=".frog"
+            android:exported="false" />
+        <activity
+            android:name=".backlunges"
+            android:exported="false" />
+        <activity
             android:name=".workout"
             android:exported="true" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true" />

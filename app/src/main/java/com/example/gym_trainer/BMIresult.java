@@ -62,8 +62,8 @@ public class BMIresult extends AppCompatActivity {
         if(intbmi<16)
         {
             mbmicategory.setText("Severe Thinness");
-            mbackground.setBackgroundColor(Color.GRAY);
-            mimageview.setImageResource(R.drawable.crosss);
+            mbackground.setBackgroundColor(Color.WHITE);
+            mimageview.setImageResource(R.drawable.wwarning);
         }
         else if(intbmi < 16.9 && intbmi>16)
         {

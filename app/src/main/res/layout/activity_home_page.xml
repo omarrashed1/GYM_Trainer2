@@ -71,6 +71,7 @@
                 android:layout_width="106dp"
                 android:layout_height="90dp"
                 android:layout_margin="25dp"
+                android:background="@drawable/selector"
                 app:srcCompat="@drawable/arm22"
                 tools:layout_editor_absoluteX="152dp"
                 tools:layout_editor_absoluteY="139dp"
@@ -81,6 +82,7 @@
                 android:layout_height="90dp"
                 android:layout_margin="25dp"
                 app:srcCompat="@drawable/arm22"
+                android:background="@drawable/selector"
                 tools:layout_editor_absoluteX="152dp"
                 tools:layout_editor_absoluteY="139dp"
                 />
@@ -155,5 +157,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.36"
         app:srcCompat="@drawable/rrunning" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:itemTextColor="#9BA3EB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:itemIconTint="#9BA3EB"
+        app:itemBackground="@drawable/selector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
