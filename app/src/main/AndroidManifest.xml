@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GYM_Trainer">
         <activity
+            android:name=".beginner"
+            android:exported="false" />
+        <activity
             android:name=".exe"
             android:exported="false" />
         <activity

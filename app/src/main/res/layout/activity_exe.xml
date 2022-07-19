@@ -46,7 +46,7 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/selector"
-                app:srcCompat="@drawable/beginner1" />
+                app:srcCompat="@drawable/gym1" />
             <ImageView
                 android:id="@+id/imageView5545"
                 android:layout_width="243dp"
@@ -64,7 +64,7 @@
                 android:layout_weight="1"
              android:layout_marginRight="30dp"
                 android:background="@drawable/selector"
-                app:srcCompat="@drawable/gym33" />
+                app:srcCompat="@drawable/gym3" />
 
         </LinearLayout>
 
@@ -81,5 +81,7 @@
         app:itemBackground="@drawable/selector"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
